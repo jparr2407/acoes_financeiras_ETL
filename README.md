@@ -2,6 +2,11 @@
 
 Pipeline ETL em Python para coletar cotacoes de acoes brasileiras pelo Yahoo Finance, transformar os dados e carregar em PostgreSQL. O fluxo pode ser executado manualmente ou orquestrado pelo Apache Airflow.
 
+## Fluxo
+<img width="1244" height="399" alt="Analytics Engineering - ETL de acompanhamento de preço de açoes" src="https://github.com/user-attachments/assets/6d25549c-b62c-4a21-9edd-4bb3eb1e45be" />
+
+O pipeline coleta dados diarios dos tickers definidos no projeto, padroniza colunas e datas, remove campos desnecessarios, adiciona o identificador de cada ativo e grava os dados no banco com upsert para evitar duplicidades.
+
 ## Stack
 
 - Python 3.12
@@ -13,13 +18,6 @@ Pipeline ETL em Python para coletar cotacoes de acoes brasileiras pelo Yahoo Fin
 - Docker Compose
 - Power BI
 
-## Fluxo
-
-```text
-Yahoo Finance -> Extract -> Transform -> PostgreSQL -> Power BI
-```
-
-O pipeline coleta dados diarios dos tickers definidos no projeto, padroniza colunas e datas, remove campos desnecessarios, adiciona o identificador de cada ativo e grava os dados no banco com upsert para evitar duplicidades.
 
 ## Estrutura
 
